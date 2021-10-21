@@ -1,9 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
-$primary-bg: #F3F6FD;
-$secondary-bg: #FFFFFF;
-$card-bg: #D7DDFE;
-$primary-text: #363243;
-$secondary-text: #818181;
+@import "colours";
 
 *{
     box-sizing: border-box;
@@ -12,4 +8,5 @@ $secondary-text: #818181;
 body{
     background-color: $primary-bg;
     color: $primary-text;
+    min-height: 100% !important;
 }

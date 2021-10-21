@@ -7,7 +7,6 @@ import { NavComponent } from './layout/nav/nav.component';
 import { FooterComponent } from './layout/footer/footer.component';
 import { SidebarComponent } from './layout/sidebar/sidebar.component';
 import { CardViewComponent } from './shared/component/card-view/card-view.component';
-import { SideBarComponent } from './shared/component/side-bar/side-bar.component';
 
 @NgModule({
   declarations: [
@@ -15,8 +14,7 @@ import { SideBarComponent } from './shared/component/side-bar/side-bar.component
     NavComponent,
     FooterComponent,
     SidebarComponent,
-    CardViewComponent,
-    SideBarComponent
+    CardViewComponent
   ],
   imports: [
     BrowserModule,
