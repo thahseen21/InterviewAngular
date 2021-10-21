@@ -4,3 +4,12 @@ $secondary-bg: #FFFFFF;
 $card-bg: #D7DDFE;
 $primary-text: #363243;
 $secondary-text: #818181;
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: $primary-bg;
+    color: $primary-text;
+}
