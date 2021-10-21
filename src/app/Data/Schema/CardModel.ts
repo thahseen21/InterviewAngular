@@ -1,8 +1,8 @@
-export class Card{
-    CandiateId: number=0;
-    Name: string = '';
-    CreatedOn: Date = new Date;
-    AppliedFor: string = '';
-    CurrentRound: number = 2;
-    Interview: {InterviewerID: number, InterviewerName: string}[] = [];
+export interface Card{
+    CandiateId: number;
+    Name: string;
+    CreatedOn: Date;
+    AppliedFor: string;
+    CurrentRound: number;
+    Interview: {InterviewerID: number, InterviewerName: string}[];
 }
