@@ -1,15 +1,17 @@
 @import "../../../scss/colours";
 
 .side-bar{
-    width: 5rem;
+    position: relative;
+    width: fit-content;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
     ul{
+        position: relative;
         list-style-type: none;
-        height: 100%;
-
-        .home-icon{
-            margin-top: 7rem;
-        }
-
+        padding: 0;
+        height: 100vh;
+        top: 8rem;
         a{
             text-decoration: none;
             color: inherit;
@@ -17,7 +19,6 @@
     }
     li{
         font-size: 1.6rem;
-        margin-left: -1rem;
 
         .fa-user-plus{
             font-size: 1.5rem;
@@ -32,7 +33,6 @@
             padding: 0.3rem 1rem;
             text-align: center;
             display: inline-block;
-            margin: 4px 2px;
             cursor: pointer;
             border-radius: 2rem;
 
