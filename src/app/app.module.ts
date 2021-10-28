@@ -8,6 +8,7 @@ import { FooterComponent } from './layout/footer/footer.component';
 import { SidebarComponent } from './layout/sidebar/sidebar.component';
 import { CardViewComponent } from './shared/component/card-view/card-view.component';
 import { SearchBarComponent } from './shared/component/search-bar/search-bar.component';
+import { ApplicantCardComponent } from './shared/component/applicant-card/applicant-card.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { SearchBarComponent } from './shared/component/search-bar/search-bar.com
     FooterComponent,
     SidebarComponent,
     CardViewComponent,
-    SearchBarComponent
+    SearchBarComponent,
+    ApplicantCardComponent
   ],
   imports: [
     BrowserModule,

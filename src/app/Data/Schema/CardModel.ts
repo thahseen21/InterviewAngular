@@ -4,5 +4,6 @@ export interface Card{
     CreatedOn: Date;
     AppliedFor: string;
     CurrentRound: number;
+    InterviewDate: Date;
     Interview: {InterviewerID: number, InterviewerName: string}[];
 }
