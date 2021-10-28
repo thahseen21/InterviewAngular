@@ -1,0 +1,171 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700&display=swap");
+
+$card-bg-color: #d7ddfe;
+$primary-text-color: #363243;
+$secondary-text-color: #818181;
+$white-text-color: #ffffff;
+
+$p-font-size-extra-small: 0.6rem;
+$p-font-size-small: 1rem;
+$p-font-size-medium: 1.14rem;
+$p-font-size-large: 1.28rem;
+
+$h1-font-size-small: 2.14rem;
+
+$bold: 600;
+$extra-bold: 700;
+$dark: 500;
+$regular: 400;
+$light: 300;
+$extra-light: 300;
+
+.card-view-container {
+  background-color: $card-bg-color;
+  padding: 1rem;
+  font-family: "Inter", sans-serif;
+  color: $primary-text-color;
+  border-radius: 1rem;
+}
+
+.card-view-container {
+  .applied-date {
+    color: $secondary-text-color;
+    font-weight: $dark;
+  }
+
+  .candidate-box {
+    text-align: center;
+    margin: 2rem 0rem;
+
+    .candidate-box-name {
+      color: $primary-text-color;
+      font-weight: $extra-bold;
+      font-size: 1.14rem;
+    }
+    .candidate-box-designation {
+      color: $primary-text-color;
+      font-weight: $bold;
+      font-size: $p-font-size-small;
+      margin-top: 6px;
+    }
+  }
+
+  .progress-box {
+    margin: 1rem 0rem;
+    text-align: center;
+
+    .progress-bar {
+      height: 1.2rem;
+      position: relative;
+      top: 0px;
+      display: flex;
+      justify-content: space-between;
+      overflow: hidden;
+      ul {
+        padding-left: 0;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+      }
+      li {
+        list-style: none;
+      }
+      .progress-step {
+        width: 100%;
+        position: relative;
+        .round-completed {
+          background-color: darken($card-bg-color, 60%);
+        }
+      }
+      .progress-step::after {
+        content: " ";
+        height: 0.2rem;
+        background-color: darken($card-bg-color, 20%);
+        width: 100%;
+        position: absolute;
+        top: 45%;
+      }
+      .progress-step-completed::after {
+        background-color: darken($card-bg-color, 60%);
+      }
+      .progress-step:last-child::after {
+        display: none;
+      }
+      .circle {
+        width: 1.2rem;
+        height: 100%;
+        background-color: darken($card-bg-color, 20%);
+        border-radius: 100%;
+      }
+    }
+    .progress-box-round-header {
+      font-size: $p-font-size-extra-small;
+      font-weight: bold;
+      text-align: right;
+      width: 100%;
+    }
+  }
+
+  .days-left-box {
+    display: flex;
+    padding: 0px 2rem 0px 2rem;
+
+    li {
+      list-style: none;
+    }
+
+    .interviewer-wrapper {
+      display: flex;
+      max-width: 300px;
+      flex: 2;
+
+      .add-button {
+        display: flex;
+        background-color: darken($card-bg-color, 60%);
+        color: white;
+        min-width: 2.5rem;
+        height: 2.5rem;
+        border-radius: 50%;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+
+    .interviewer {
+      background-color: darken($card-bg-color, 20%);
+      margin-right: 2px;
+      min-width: 2.5rem;
+      height: 2.5rem;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: $p-font-size-large;
+    }
+
+    .days-left {
+      display: flex;
+      flex-direction: row-reverse;
+      flex: 1;
+      align-items: center;
+
+      .day-container {
+        width: 100px;
+        border-radius: 1rem;
+        span {
+          background-color: darken($card-bg-color, 20%);
+          font-size: $p-font-size-extra-small;
+          font-weight: $extra-bold;
+          text-align: right;
+          padding: 0.4rem;
+          border-radius: 1rem;
+          color: $white-text-color;
+        }
+      }
+    }
+  }
+}
+#test {
+  max-width: 250px;
+  display: flex;
+}
