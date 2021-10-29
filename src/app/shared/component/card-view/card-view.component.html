@@ -1,9 +1,11 @@
 <div class="card-view-container">
   <span class="applied-date">2021-October-21</span>
+
   <div class="candidate-box">
     <div class="candidate-box-name">Mohammed Thahseen</div>
     <div class="candidate-box-designation">Full Stack Developer</div>
   </div>
+
   <div class="progress-box">
     <div class="progress-bar">
       <li class="progress-step progress-step-completed">
@@ -17,15 +19,19 @@
       <li class="progress-step">
         <svg class="circle round-completed"></svg>
       </li>
+
       <li class="progress-step">
         <svg class="circle"></svg>
       </li>
+
       <li class="progress-step">
         <svg class="circle"></svg>
       </li>
     </div>
+
     <span class="progress-box-round-header">Face 2 Face</span>
   </div>
+
   <div class="days-left-box">
     <div id="interviewer-wrapper" class="interviewer-wrapper">
       <div id="test">
@@ -33,14 +39,25 @@
           {{ item }}
         </div>
       </div>
-      <div class="add-button">
+
+      <button
+        class="add-button btn-primary"
+        type="button"
+        data-toggle="modal"
+        data-target="#addInterviewModal"
+      >
         <i class="far fa-plus fa-2x"></i>
-      </div>
+      </button>
     </div>
+
     <div class="days-left">
       <div class="day-container">
         <span>2 Days Left</span>
       </div>
     </div>
   </div>
+
+  <app-modal modalName="addInterviewModal">
+    <app-add-interviewer-form></app-add-interviewer-form>
+  </app-modal>
 </div>
