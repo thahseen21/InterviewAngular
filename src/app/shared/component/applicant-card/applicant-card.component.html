@@ -2,21 +2,21 @@
   <div class="card">
     <div class="header-section">
       <div class="name">
-        <h5>{{name}}</h5>
-        <h6>{{position}}</h6>
+        <h5>{{data.Name}}</h5>
+        <h6>{{data.AppliedFor}}</h6>
       </div>
       <div class="profile">
-        <span class="user-pill">{{nameBatch}}</span>
+        <span class="user-pill">{{data.Name[0]}}</span>
       </div>
     </div>
     <div class="row info">
-      <h6>Id:</h6>
-      <h6>LastEmployer:</h6>
-      <h6>Designation:</h6>
-      <h6>AppliedFor:</h6>
-      <h6>ReferedBy:</h6>
-      <h6>MedicalStatus:</h6>
-      <h6>NoticePeriod:</h6>
+      <h6>Id: {{data.applicantId}}</h6>
+      <h6>LastEmployer: {{data.LastEmployer}}</h6>
+      <h6>Designation: {{data.Designation}}</h6>
+      <h6>AppliedFor: {{data.AppliedFor}}</h6>
+      <h6>ReferedBy: {{data.ReferredBy}}</h6>
+      <h6>MedicalStatus: {{data.MedicalStatus}}</h6>
+      <h6>NoticePeriod: {{data.NoticePeriod}}</h6>
     </div>
     <div class="review-status-bar">
       <p>
@@ -32,10 +32,32 @@
         </button>
       </p>
       <div class="collapse" id="collapseExample">
-        <div class="card card-body">
-          Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus
-          terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer
-          labore wes anderson cred nesciunt sapiente ea proident.
+        <div class="card bg-white">
+          <div class="card-header">
+            Interview Id: 1
+          </div>
+          <div class="card-body">
+            <div class="review-part">
+              <p>Pros: </p>
+              <p>Cons: </p>
+              <p>Comments: </p>
+              <p class="status">Status: </p>
+              <p>Skill: </p>
+              <div class="skill-set">
+                <div class="card card-body">
+                  <h6 class="card-title">
+                    <div>Skill Categoryid: 1</div>  <div>Skill Name: SoftSkill</div>
+                  </h6>
+                  <div class="card-text">
+                    <p>Skill Name: </p>
+                    <p>Rating: </p>
+                  </div>
+                </div>
+                <p class="skill-title"></p>
+
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <div class="result-btn mb-3 mt-2">

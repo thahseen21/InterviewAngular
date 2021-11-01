@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import * as dummydata from '../../../../dummydata/data.json';
 @Component({
   selector: 'app-applicant-card',
   templateUrl: './applicant-card.component.html',
@@ -7,15 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ApplicantCardComponent implements OnInit {
 
+ data :any = dummydata;
+
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  nameBatch = 'H';
-  name = 'Hari';
-  position = 'Developer';
-  
   addEventHandler(){
     let element = document.getElementsByClassName('ps__rail-y')[0] as HTMLElement;
     element.addEventListener('click', this.scroll, true);
