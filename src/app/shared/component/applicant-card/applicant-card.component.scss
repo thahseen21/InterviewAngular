@@ -1,6 +1,6 @@
 @import "../../../../scss/variables";
 
-.applicant-card {
+.applicant-card-wrapper {
   position: relative;
   height: fit-content;
   
@@ -31,8 +31,12 @@
   .user-pill {
     background-color: $link-color-active-bg;
     color: $link-color-active;
-    padding: 0.5rem 1rem;
-    border-radius: 30px;
+    min-height: 3rem;
+    min-width: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
     font-size: 2rem;
     font-weight: $bold;
   }
@@ -52,6 +56,11 @@
 
     p{
         padding-left: 1rem;
+    }
+
+    .card-title{
+      display: flex;
+      gap: 2rem;
     }
   }
 

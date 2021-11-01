@@ -1,4 +1,4 @@
-<div class="applicant-card">
+<div class="applicant-card-wrapper">
   <div class="card">
     <div class="header-section">
       <div class="name">
@@ -32,13 +32,13 @@
         </button>
       </p>
       <div class="collapse" id="collapseExample">
-        <div class="card bg-white">
+        <div class="card bg-white" *ngFor="let item of data.InterviewDetails">
           <div class="card-header">
-            Interview Id: 1
+            Interview Id: {{item.interviewId}}
           </div>
           <div class="card-body">
             <div class="review-part">
-              <p>Pros: </p>
+              <p>Pros:</p>
               <p>Cons: </p>
               <p>Comments: </p>
               <p class="status">Status: </p>
