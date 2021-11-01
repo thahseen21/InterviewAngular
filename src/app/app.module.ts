@@ -12,6 +12,7 @@ import { ApplicantCardComponent } from './shared/component/applicant-card/applic
 import { DashboardViewComponent } from './shared/component/dashboard-view/dashboard-view.component';
 import { ModalComponent } from './shared/component/modal/modal.component';
 import { AddInterviewerFormComponent } from './shared/component/add-interviewer-form/add-interviewer-form.component';
+import { ContentLayoutComponent } from './layout/content-layout/content-layout.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { AddInterviewerFormComponent } from './shared/component/add-interviewer-
     ApplicantCardComponent,
     DashboardViewComponent,
     ModalComponent,
-    AddInterviewerFormComponent
+    AddInterviewerFormComponent,
+    ContentLayoutComponent
   ],
   imports: [
     BrowserModule,
