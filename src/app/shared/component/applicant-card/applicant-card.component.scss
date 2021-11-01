@@ -3,7 +3,11 @@
 .applicant-card-wrapper {
   position: relative;
   height: fit-content;
-  
+
+  .main-card{
+    padding: 1rem;
+  }
+
   .card{
       background-color: $card-bg;
       border-radius: 1rem;
@@ -44,6 +48,7 @@
   .info {
     display: flex;
     flex-direction: column;
+    margin: 0;
     gap: 1rem;
     padding: 2rem 5rem;
   }
@@ -58,9 +63,17 @@
         padding-left: 1rem;
     }
 
+    .scrollable-menu {
+      height: auto;
+      max-height: 200px;
+      overflow-x: hidden;
+    }
+
     .card-title, .card-header{
       display: flex;
       gap: 2rem;
+      background: none;
+      border: none;
 
       .result-bar{
         border: 1px solid;
@@ -73,9 +86,6 @@
         color: $link-color-active;
       }
 
-      .card-text{
-        
-      }
     }
 
   }
