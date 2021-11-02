@@ -9,6 +9,7 @@ import { SidebarComponent } from './layout/sidebar/sidebar.component';
 import { CardViewComponent } from './shared/component/card-view/card-view.component';
 import { SearchBarComponent } from './shared/component/search-bar/search-bar.component';
 import { ApplicantCardComponent } from './shared/component/applicant-card/applicant-card.component';
+import { HasRoleDirective } from './shared/directive/has-role.directive';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { ApplicantCardComponent } from './shared/component/applicant-card/applic
     SidebarComponent,
     CardViewComponent,
     SearchBarComponent,
-    ApplicantCardComponent
+    ApplicantCardComponent,
+    HasRoleDirective,
   ],
   imports: [
     BrowserModule,

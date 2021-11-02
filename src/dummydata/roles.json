@@ -1,0 +1,8 @@
+{
+    "roles": [
+      "Admin",
+      "SuperAdmin",
+      "User",
+      "DataManager"
+    ]
+  }
