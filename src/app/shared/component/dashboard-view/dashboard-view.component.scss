@@ -78,4 +78,6 @@ body {
   grid-template-columns: auto auto auto;
   grid-gap: 1rem;
   margin-top: 2rem;
+  overflow-y: scroll;
+  height: 72vh;
 }

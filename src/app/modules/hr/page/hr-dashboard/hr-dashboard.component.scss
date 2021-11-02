@@ -1,6 +1,5 @@
 .hr-dashboard-wrapper {
   display: flex;
-  background-color: pink;
 }
 
 .app-dashboard-view {
@@ -9,4 +8,6 @@
 
 :host {
   width: inherit;
+  overflow: hidden;
+  height: 90vh;
 }
