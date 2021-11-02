@@ -1,51 +1,37 @@
 @import "../../../scss/variables";
 
-.side-bar{
-    position: relative;
-    width: fit-content;
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    ul{
-        position: relative;
-        list-style-type: none;
-        padding: 0;
-        height: 100vh;
-        top: 8rem;
-        a{
-            text-decoration: none;
-            color: inherit;
-        }
+.side-bar {
+  // position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  list-style-type: none;
+  background-color: rebeccapurple;
+  margin: 0px;
+  padding: 0px;
+
+  top: calc(100vh - 80%);
+
+  li {
+    font-size: 1.6rem;
+    margin-top: 2rem;
+
+    .nav-button {
+      border: none;
+      padding: 0.3rem 1rem;
+      text-align: center;
+      cursor: pointer;
+      border-radius: 2rem;
+
+      &:hover {
+        background-color: $link-color-hover-bg;
+        color: $link-color-active;
+      }
+
+      &:active {
+        background-color: $link-color-active-bg;
+        color: $link-color-active;
+      }
     }
-    li{
-        font-size: 1.6rem;
-
-        .fa-user-plus{
-            font-size: 1.5rem;
-        }
-
-        .fa-home{
-            padding: 0 0.1rem 0 0.1rem;
-        }
-
-        .nav-button{
-            border: none;
-            padding: 0.3rem 1rem;
-            text-align: center;
-            display: inline-block;
-            cursor: pointer;
-            border-radius: 2rem;
-
-            &:hover{
-                background-color: $link-color-hover-bg;
-                color: $link-color-active;
-            }
-
-            &:active{
-                background-color: $link-color-active-bg;
-                color: $link-color-active;
-            }
-        }
-    }
-
+  }
 }

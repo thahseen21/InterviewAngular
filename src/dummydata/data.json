@@ -76,7 +76,7 @@
     "interviewId": 2,
     "InterviewRoundId": 1,
     "ScheduleDate": "2021-10-29",
-    "result": 1,
+    "result": "fail",
     "interviewReview": [
       {
         "EmployeeInterviewId": 1,

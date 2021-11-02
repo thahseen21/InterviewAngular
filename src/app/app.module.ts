@@ -13,6 +13,7 @@ import { DashboardViewComponent } from './shared/component/dashboard-view/dashbo
 import { ModalComponent } from './shared/component/modal/modal.component';
 import { AddInterviewerFormComponent } from './shared/component/add-interviewer-form/add-interviewer-form.component';
 import { ContentLayoutComponent } from './layout/content-layout/content-layout.component';
+import { HrDashboardComponent } from './modules/hr/page/hr-dashboard/hr-dashboard.component';
 
 @NgModule({
   declarations: [
@@ -26,13 +27,11 @@ import { ContentLayoutComponent } from './layout/content-layout/content-layout.c
     DashboardViewComponent,
     ModalComponent,
     AddInterviewerFormComponent,
-    ContentLayoutComponent
+    ContentLayoutComponent,
+    HrDashboardComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  imports: [BrowserModule, AppRoutingModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

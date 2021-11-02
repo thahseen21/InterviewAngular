@@ -1,4 +1,4 @@
-<div class="applicant-card">
+<div class="applicant-card-wrapper">
   <div class="card">
     <div class="header-section">
       <div class="name">
@@ -32,29 +32,47 @@
         </button>
       </p>
       <div class="collapse" id="collapseExample">
-        <div class="card bg-white">
-          <div class="card-header">
-            Interview Id: 1
+        <div class="card bg-white" *ngFor="let item of data.InterviewDetails">
+          <div class="card-header row">
+            <div class="col-12 col-sm-4 col-md-2">
+              Interview Id: {{item.interviewId}}
+            </div>
+            <div class=" col-12col-sm-4 col-md-2">
+              Date: {{item.ScheduleDate}}
+            </div>
+            <div class="result-bar col-12 col-sm-4 col-md-2">
+              {{item.result}}
+            </div>
           </div>
           <div class="card-body">
             <div class="review-part">
-              <p>Pros: </p>
-              <p>Cons: </p>
-              <p>Comments: </p>
-              <p class="status">Status: </p>
-              <p>Skill: </p>
-              <div class="skill-set">
-                <div class="card card-body">
-                  <h6 class="card-title">
-                    <div>Skill Categoryid: 1</div>  <div>Skill Name: SoftSkill</div>
-                  </h6>
-                  <div class="card-text">
-                    <p>Skill Name: </p>
-                    <p>Rating: </p>
+              <div  *ngFor="let review of item.interviewReview">
+                <p>Pros: {{review.Pros}}</p>
+                <p>Cons: {{review.Cons}}</p>
+                <p>Comments: {{review.Comments}}</p>
+                <p class="status">Status: {{review.status}}</p>
+                <p>Skill: </p>
+                <div class="skill-set">
+                  <div class="card card-body">
+                    <div *ngFor="let skill of review.skill">
+                      <h6 class="card-title mb-2 mt-3">
+                        <div class="col-12 col-sm-6 col-md-4">
+                          <p>Category Name: {{skill.skillName}}</p>
+                        </div>
+                      </h6>
+                      <div class="card-text" *ngFor="let set of skill.skillset">
+                        <div class="row">
+                          <div class="col-12 col-sm-6 col-md-3">
+                            <p>Skill Name: {{set.skillname}}</p>
+                          </div>
+                          <div class="col-12 col-sm-6 col-md-4">
+                            <p>Rating: {{set.rating}}</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
-                <p class="skill-title"></p>
-
               </div>
             </div>
           </div>

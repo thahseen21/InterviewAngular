@@ -1,37 +1,50 @@
 @import "../../../scss/variables";
 
-.top-nav{
-    position: absolute;
-    width: 100%;
-    height: auto;
+.top-nav {
+  position: relative;
+  width: 100%;
+  height: auto;
+  display: flex;
+  gap: 0.2rem;
+  padding: 0.5rem;
+  background-color: pink;
+  margin: 0;
+
+  & div:nth-of-type(2) {
+    flex-grow: 3;
+    width: auto;
+  }
+
+  .search-bar {
+    align-content: baseline;
+  }
+
+  .name {
     display: flex;
-    flex-direction: row-reverse;
-    gap: 0.2rem;
-    justify-content: space-between;
+    width: auto;
 
-    .name{
-        display: flex;
-        flex-direction: row-reverse;
-        
-    .user-name{
-        position: relative;
-        font-weight: $medium;
-        padding: 0.5rem;
-        top: 0.4rem;
+    .user-name {
+      position: relative;
+      font-weight: $regular;
+      padding: 0.5rem;
+      top: 0.4rem;
     }
 
-    .user-pill{
-        background-color: $link-color-active-bg;
-        color: $link-color-active;
-        padding: 0.5rem 1rem;
-        border-radius: 30px;
-        font-size: 1.3rem;
-        font-weight: $bold;
+    .user-pill {
+      background-color: $link-color-active-bg;
+      color: $link-color-active;
+      min-width: 3rem;
+      min-height: 3rem;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: $bold;
     }
-    }
+  }
 
-    .header{
-        align-self: center;
-    }
+  .header {
+    width: auto;
+    align-self: center;
+  }
 }
-
