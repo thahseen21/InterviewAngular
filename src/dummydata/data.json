@@ -15,7 +15,7 @@
     "result": "pass",
     "interviewReview": [
       {
-        "EmployeeInterviewId": 1,
+        "EmployeeInterviewId": 1, "Name": "Madhan",
         "reviewId": 1,
         "Pros": "good",
         "Cons": "less in logical thinking",
