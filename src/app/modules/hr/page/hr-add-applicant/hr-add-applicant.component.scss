@@ -1,0 +1,36 @@
+@import "../../../../../scss/variables";
+
+.form-wrapper{
+    padding: 4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    label{
+        color: $secondary-text;
+    }
+
+    input{
+        border: none;
+        border-bottom: 1px solid #ced4da;
+        border-radius: 0;
+
+        &:focus{
+            box-shadow: none;
+        }
+    }
+
+    .upload-btn{
+        border-radius: 50%;
+    }
+
+    .file-input {
+        display: none;
+      }
+
+    @media screen and (min-width: 760px) {
+        .second-lable{
+            margin-left: 4rem;
+        }
+    }
+}

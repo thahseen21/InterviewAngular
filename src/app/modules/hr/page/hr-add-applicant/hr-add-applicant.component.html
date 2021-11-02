@@ -1,1 +1,167 @@
-<p>hr-add-applicant works!</p>
+<form
+  class="form-wrapper"
+  autocomplete="off"
+  [formGroup]="applicantForm"
+  (ngSubmit)="onSubmit()"
+>
+
+<!-- <table border="1">
+    <tr>
+      <th style="padding: 10px">FormGroup</th>
+      <th style="padding: 10px">FormControl (fullName)</th>
+    </tr>
+    <tr>
+      <td style="padding: 10px">
+        touched : {{ applicantForm.touched }}
+        <br/> dirty : {{ applicantForm.dirty }}
+        <br/> valid : {{ applicantForm.valid }}
+        <br/> Form Values : {{applicantForm.value | json}}
+      </td>
+      <td style="padding: 10px">
+        touched : {{ applicantForm.get('name')!.touched }}
+        <br/> dirty : {{ applicantForm.get('name')!.dirty }}
+        <br/> valid : {{ applicantForm.get('name')!.valid }}
+        <br/> FullName Value : {{applicantForm.get('name')!.value}}
+      </td>
+    </tr>
+  </table> -->
+
+  <h5 class="text-primary mt-0 mb-0">Applicant Details</h5>
+  <hr />
+
+  <div class="row align-items-center">
+    <div class="col-12 col-md-4">
+      <label class="form-lable" for="name">Name *</label>
+      <input
+        type="text"
+        class="form-control"
+        name="name"
+        formControlName="name"
+      />
+    </div>
+    <!-- <div class="col-12 col-sm-6 col-md-2">
+            <label class="form-lable" for="name">Name *</label>
+        </div>
+        <div class="col-12 col-sm-6 col-md-2">
+            <input type="text" class="form-control" name="name" formControlName="name">
+        </div> -->
+  </div>
+
+  <div class="row align-items-center mt-2">
+    <div class="col-12 col-md-4">
+      <label class="form-lable" for="lastemployer">Last Employer *</label>
+      <input
+        type="text"
+        class="form-control"
+        name="lastemployer"
+        formControlName="lastEmployer"
+      />
+    </div>
+    <div class="col-12 col-md-4 second-lable">
+      <label class="form-lable" for="lastdesig">Last Designation *</label>
+      <input
+        type="text"
+        class="form-control"
+        name="lastdesig"
+        formControlName="lastDesignation"
+      />
+    </div>
+
+    <!-- <div class="col-12 col-sm-6 col-md-2">
+            <label class="form-lable" for="lastemployer">Last Employer *</label>
+        </div>
+        <div class="col-12 col-sm-6 col-md-2">
+            <input type="text" class="form-control" name="lastemployer" formControlName="lastEmployer">
+        </div>
+        <div class="col-12 col-sm-6 col-md-2 ml-5 second-lable">
+            <label class="form-lable" for="lastdesig">Last Designation *</label>
+        </div>
+        <div class="col-12 col-sm-6 col-md-2">
+            <input type="text" class="form-control" name="lastdesig" formControlName="lastDesignation">
+        </div> -->
+  </div>
+
+  <div class="row align-items-center mt-2">
+    <div class="col-12 col-md-4">
+      <label class="form-lable" for="appliedfor">Applied For *</label>
+      <input
+        type="text"
+        class="form-control"
+        name="appliedfor"
+        formControlName="appliedFor"
+      />
+    </div>
+    <div class="col-12 col-md-4 second-lable">
+      <label class="form-lable" for="referedby">Refered By *</label>
+      <input
+        type="text"
+        class="form-control"
+        name="referedby"
+        formControlName="referedBy"
+      />
+    </div>
+
+    <!-- <div class="col-12 col-sm-6 col-md-2">
+            <label class="form-lable" for="appliedfor">Applied For *</label>
+        </div>
+        <div class="col-12 col-sm-6 col-md-2">
+            <input type="text" class="form-control" name="appliedfor" formControlName="appliedFor">
+        </div>
+        <div class="col-12 col-sm-6 col-md-2 ml-5 second-lable">
+            <label class="form-lable" for="referedby">Refered By *</label>
+        </div>
+        <div class="col-12 col-sm-6 col-md-2">
+            <input type="text" class="form-control" name="referedby" formControlName="referedBy">
+        </div> -->
+  </div>
+
+  <div class="row align-items-center mt-2">
+    <div class="col-12 col-md-4">
+      <label class="form-lable" for="medicalstatus">Medical Status *</label>
+      <input
+        type="text"
+        class="form-control"
+        name="medicalstatus"
+        formControlName="medicalStatus"
+      />
+    </div>
+    <div class="col-12 col-md-4 second-lable">
+      <label class="form-lable" for="noticeperiod">Notice Period *</label>
+      <input
+        type="text"
+        class="form-control"
+        name="noticeperiod"
+        formControlName="noticePeriod"
+      />
+    </div>
+  </div>
+
+  <div class="row align-items-center mt-2">
+    <label class="form-lable" for="resume">Resume *</label>
+
+    <input
+      type="file"
+      class="file-input"
+      (change)="onFileSelected($event)"
+      accept=".pdf,.doc"
+      #fileUpload
+      formControlName="resume"
+    />
+
+    <div class="file-upload">
+      {{ fileName || "No file uploaded yet." }}
+
+      <button
+        mat-mini-fab
+        color="primary"
+        class="upload-btn btn btn-primary"
+        (click)="fileUpload.click()"
+      >
+        <i class="fa fa-paperclip"></i>
+      </button>
+    </div>
+  </div>
+
+  <br />
+  <input type="submit" class="btn btn-primary w-25" value="Submit" />
+</form>
