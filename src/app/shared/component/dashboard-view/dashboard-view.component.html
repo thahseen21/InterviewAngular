@@ -39,7 +39,10 @@
   </div>
   <div class="card-view-container">
     <div class="card-view-wrapper">
-      <app-card-view *ngFor="let item of list"></app-card-view>
+      <app-card-view
+        *ngFor="let item of candidateDetailList"
+        [candidateDetail]="item"
+      ></app-card-view>
     </div>
   </div>
 </div>

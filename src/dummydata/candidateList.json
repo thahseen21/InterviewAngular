@@ -1,0 +1,40 @@
+[
+  {
+    "CandidateId": 1,
+    "Name": "Mohammed Thahseen N",
+    "CreatedOn": "2021-10-12",
+    "AppliedFor": "Full Stack Developer",
+    "CurrentRound": 4,
+    "InterviewAt": "2021-11-07",
+    "Interview": [
+      { "interviewerId": 1, "interviewName": "Jeeva" },
+      { "interviewerId": 1, "interviewName": "Madhan" }
+    ]
+  },
+  {
+    "CandidateId": 2,
+    "Name": "HariHaran Tamilarsan",
+    "CreatedOn": "2021-10-13",
+    "AppliedFor": "Full Stack Developer",
+    "CurrentRound": 3,
+    "InterviewAt": "2021-11-07",
+    "Interview": [
+      { "interviewerId": 1, "interviewName": "Jeeva" },
+      { "interviewerId": 1, "interviewName": "Madhan" },
+      { "interviewerId": 1, "interviewName": "Ebe " }
+    ]
+  },
+  {
+    "CandidateId": 3,
+    "Name": "Vijay",
+    "CreatedOn": "2021-10-13",
+    "AppliedFor": "Integretion",
+    "CurrentRound": 2,
+    "InterviewAt": "2021-11-06",
+    "Interview": [
+      { "interviewerId": 1, "interviewName": "Jeeva" },
+      { "interviewerId": 1, "interviewName": "Madhan" },
+      { "interviewerId": 1, "interviewName": "Ebe " }
+    ]
+  }
+]

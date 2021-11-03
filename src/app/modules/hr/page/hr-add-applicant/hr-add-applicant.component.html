@@ -8,10 +8,12 @@
   <hr />
 
   <div class="row align-items-center">
-    <div class="col-12 col-md-4 form-group" [ngClass]="{'has-error': formErrors.name}">
-      
+    <div
+      class="col-12 col-md-4 form-group"
+      [ngClass]="{ 'has-error': formErrors.name }"
+    >
       <span class="help-block text-danger" *ngIf="formErrors.name">
-        {{formErrors.name}}
+        {{ formErrors.name }}
       </span>
       <input
         type="text"
@@ -21,14 +23,16 @@
         (blur)="logValidationErrors()"
       />
       <label class="form-lable" for="name">Name *</label>
-
     </div>
   </div>
 
   <div class="row align-items-center mt-2">
-    <div class="col-12 col-md-4 form-group" [ngClass]="{'has-error': formErrors.lastEmployer}">
+    <div
+      class="col-12 col-md-4 form-group"
+      [ngClass]="{ 'has-error': formErrors.lastEmployer }"
+    >
       <span class="help-block text-danger" *ngIf="formErrors.lastEmployer">
-        {{formErrors.lastEmployer}}
+        {{ formErrors.lastEmployer }}
       </span>
       <input
         type="text"
@@ -39,9 +43,12 @@
       />
       <label class="form-lable" for="lastemployer">Last Employer *</label>
     </div>
-    <div class="col-12 col-md-4 second-lable form-group" [ngClass]="{'has-error': formErrors.lastDesignation}">
+    <div
+      class="col-12 col-md-4 second-lable form-group"
+      [ngClass]="{ 'has-error': formErrors.lastDesignation }"
+    >
       <span class="help-block text-danger" *ngIf="formErrors.lastDesignation">
-        {{formErrors.lastDesignation}}
+        {{ formErrors.lastDesignation }}
       </span>
       <input
         type="text"
@@ -55,9 +62,12 @@
   </div>
 
   <div class="row align-items-center mt-2">
-    <div class="col-12 col-md-4 form-group" [ngClass]="{'has-error': formErrors.appliedFor}">
+    <div
+      class="col-12 col-md-4 form-group"
+      [ngClass]="{ 'has-error': formErrors.appliedFor }"
+    >
       <span class="help-block text-danger" *ngIf="formErrors.appliedFor">
-        {{formErrors.appliedFor}}
+        {{ formErrors.appliedFor }}
       </span>
       <input
         type="text"
@@ -69,9 +79,12 @@
       <label class="form-lable" for="appliedfor">Applied For *</label>
     </div>
 
-    <div class="col-12 col-md-4 form-group second-lable" [ngClass]="{'has-error': formErrors.noticePeriod}">
+    <div
+      class="col-12 col-md-4 form-group second-lable"
+      [ngClass]="{ 'has-error': formErrors.noticePeriod }"
+    >
       <span class="help-block text-danger" *ngIf="formErrors.noticePeriod">
-        {{formErrors.noticePeriod}}
+        {{ formErrors.noticePeriod }}
       </span>
       <input
         type="text"
@@ -92,7 +105,9 @@
         name="medicalstatus"
         formControlName="medicalStatus"
       />
-      <label class="form-lable" for="medicalstatus">Medical history, If any</label>
+      <label class="form-lable" for="medicalstatus"
+        >Medical history, If any</label
+      >
     </div>
 
     <div class="col-12 col-md-4 form-group second-lable">
@@ -106,7 +121,10 @@
     </div>
   </div>
 
-  <div class="row align-items-center mt-2" [ngClass]="{'has-error': formErrors.resume}">
+  <div
+    class="row align-items-center mt-2"
+    [ngClass]="{ 'has-error': formErrors.resume }"
+  >
     <div class="col-12 col-md-4 form-group">
       <input
         type="file"
@@ -117,10 +135,10 @@
         formControlName="resume"
         (blur)="logValidationErrors()"
       />
-  
+
       <div class="file-upload">
         {{ fileName || "No file uploaded yet." }}
-  
+
         <button
           mat-mini-fab
           color="primary"
@@ -134,12 +152,23 @@
     </div>
   </div>
   <span class="help-block text-danger" *ngIf="formErrors.resume">
-    {{formErrors.resume}}
+    {{ formErrors.resume }}
   </span>
 
   <br />
   <div class="action-btn">
-    <button type="button" class="btn btn-danger" (click)="applicantForm.reset()">Clear Form</button>
-    <input type="submit" class="btn btn-primary" [disabled]="applicantForm.invalid" value="Submit" />
+    <button
+      type="button"
+      class="btn btn-danger"
+      (click)="applicantForm.reset()"
+    >
+      Clear Form
+    </button>
+    <input
+      type="submit"
+      class="btn btn-primary"
+      [disabled]="applicantForm.invalid"
+      value="Submit"
+    />
   </div>
 </form>
