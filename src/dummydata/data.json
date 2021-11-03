@@ -12,6 +12,7 @@
     {
       "interviewId": 1,
       "InterviewRoundId": 1,
+      "InterviewRoundName": "Telephonic Interview",
       "ScheduleDate": "2021-10-29",
       "result": "pass",
       "interviewReview": [
@@ -78,6 +79,7 @@
     {
       "interviewId": 2,
       "InterviewRoundId": 2,
+      "InterviewRoundName": "Face 2 Face Interview",
       "ScheduleDate": "2021-10-29",
       "result": "fail",
       "interviewReview": [

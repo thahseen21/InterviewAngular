@@ -177,11 +177,11 @@
       (click)="openInterviewReview(i)"
     >
       <div class="">
-        <p>{{ interview.InterviewRoundId }}</p>
+        <p>{{ interview.InterviewRoundName }}</p>
         <p>{{ interview.result }}</p>
       </div>
 
-      <p>show more</p>
+      <p class="show-more">show more</p>
 
       <div id="interview-review-{{ i }}" class="interview-review">
         <div (click)="openInterviewReview(i)">close</div>
@@ -228,6 +228,10 @@
           <hr />
         </div>
       </div>
+    </div>
+    <div class="button-wrapper">
+      <button class="btn bg-transparent text-danger">Reject</button>
+      <button class="btn bg-transparent text-success">Promote</button>
     </div>
   </div>
 </div>
