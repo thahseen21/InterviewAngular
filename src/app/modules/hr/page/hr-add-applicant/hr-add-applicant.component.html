@@ -20,7 +20,7 @@
         formControlName="name"
         (blur)="logValidationErrors()"
       />
-      <label class="form-lable" for="name">Name *</label>
+      <label class="form-label" for="name">Name *</label>
 
     </div>
   </div>
@@ -74,18 +74,21 @@
         {{formErrors.noticePeriod}}
       </span>
       <input
-        type="text"
+        type="number"
         class="form-control"
         name="noticeperiod"
         formControlName="noticePeriod"
         (blur)="logValidationErrors()"
       />
-      <label class="form-lable" for="noticeperiod">Notice Period *</label>
+      <label class="form-lable" for="noticeperiod">Notice Period * <span class="sub-text"> (In Month)</span></label>
     </div>
   </div>
 
   <div class="row align-items-center mt-2">
-    <div class="col-12 col-md-4 form-group">
+    <div class="col-12 col-md-4 form-group" [ngClass]="{'has-error': formErrors.medicalStatus}">
+      <span class="help-block text-danger" *ngIf="formErrors.medicalStatus">
+        {{formErrors.medicalStatus}}
+      </span>
       <input
         type="text"
         class="form-control"
@@ -95,7 +98,10 @@
       <label class="form-lable" for="medicalstatus">Medical history, If any</label>
     </div>
 
-    <div class="col-12 col-md-4 form-group second-lable">
+    <div class="col-12 col-md-4 form-group second-lable" [ngClass]="{'has-error': formErrors.referedBy}">
+      <span class="help-block text-danger" *ngIf="formErrors.referedBy">
+        {{formErrors.referedBy}}
+      </span>
       <input
         type="text"
         class="form-control"
@@ -139,7 +145,7 @@
 
   <br />
   <div class="action-btn">
-    <button type="button" class="btn btn-danger" (click)="applicantForm.reset()">Clear Form</button>
-    <input type="submit" class="btn btn-primary" [disabled]="applicantForm.invalid" value="Submit" />
+    <button type="button" class="btn bg-transparent text-danger" (click)="applicantForm.reset()">Clear Form</button>
+    <input type="submit" class="btn bg-transparent text-success" [disabled]="applicantForm.invalid" value="Submit" />
   </div>
 </form>

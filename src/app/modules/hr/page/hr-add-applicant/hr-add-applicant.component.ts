@@ -31,13 +31,22 @@ export class HrAddApplicantComponent implements OnInit {
       'maxlength':'Name must be less than 20 characters'
     },
     'lastEmployer':{
-      'required':'lastEmployer is required.'
+      'required':'lastEmployer is required.',
+      'maxlength':'Last employer name must be less than 30 characters'
     },
     'lastDesignation':{
-      'required':'Last designation is required.'
+      'required':'Last designation is required.',
+      'maxlength':'Last designation must be less than 15 characters'
     },
     'appliedFor':{
-      'required':'Applied designation is required.'
+      'required':'Applied designation is required.',
+      'maxlength':'Designation must be less than 15 characters'
+    },
+    'referedBy':{
+      'maxlength':'Name must be less than 20 characters'
+    },
+    'medicalStatus':{
+      'maxlength':'Medical status must be less than 100 characters'
     },
     'noticePeriod':{
       'required':'Please enter the notice period.'
@@ -50,11 +59,11 @@ export class HrAddApplicantComponent implements OnInit {
   ngOnInit(): void {
     this.applicantForm = this.fb.group({
       name:['',[Validators.required, Validators.minLength(3), Validators.maxLength(20)]],
-      lastEmployer: ['', Validators.required],
-      lastDesignation: ['', Validators.required],
-      appliedFor: ['', Validators.required],
-      referedBy: [''],
-      medicalStatus: [''],
+      lastEmployer: ['', [Validators.required, Validators.maxLength(30)]],
+      lastDesignation: ['', [Validators.required, Validators.maxLength(15)]],
+      appliedFor: ['', [Validators.required, Validators.maxLength(15)]],
+      referedBy: ['', Validators.maxLength(20)],
+      medicalStatus: ['', Validators.maxLength(100)],
       noticePeriod: ['', Validators.required],
       resume: ['', Validators.required]
     });
