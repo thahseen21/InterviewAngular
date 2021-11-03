@@ -1,23 +1,23 @@
-<div class="applicant-card-wrapper">
+<!-- <div class="applicant-card-wrapper">
   <div class="card main-card">
     <div class="header-section">
       <div class="name">
-        <h5>{{data.Name}}</h5>
-        <h6>{{data.AppliedFor}}</h6>
+        <h5>{{ data.Name }}</h5>
+        <h6>{{ data.AppliedFor }}</h6>
       </div>
       <div class="profile">
-        <span class="user-pill">{{data.Name[0]}}</span>
+        <span class="user-pill">{{ data.Name[0] }}</span>
       </div>
     </div>
-    <hr>
+    <hr />
     <div class="row info">
-      <h6>Id: {{data.applicantId}}</h6>
-      <h6>LastEmployer: {{data.LastEmployer}}</h6>
-      <h6>Designation: {{data.Designation}}</h6>
-      <h6>AppliedFor: {{data.AppliedFor}}</h6>
-      <h6>ReferedBy: {{data.ReferredBy}}</h6>
-      <h6>MedicalStatus: {{data.MedicalStatus}}</h6>
-      <h6>NoticePeriod: {{data.NoticePeriod}}</h6>
+      <h6>Id: {{ data.applicantId }}</h6>
+      <h6>LastEmployer: {{ data.LastEmployer }}</h6>
+      <h6>Designation: {{ data.Designation }}</h6>
+      <h6>AppliedFor: {{ data.AppliedFor }}</h6>
+      <h6>ReferedBy: {{ data.ReferredBy }}</h6>
+      <h6>MedicalStatus: {{ data.MedicalStatus }}</h6>
+      <h6>NoticePeriod: {{ data.NoticePeriod }}</h6>
     </div>
     <div class="review-status-bar">
       <p>
@@ -33,58 +33,79 @@
         </button>
       </p>
       <div class="collapse" id="collapseExample">
-        <div class="card bg-white" *ngFor="let item of data.InterviewDetails; index as i;">
+        <div
+          class="card bg-white"
+          *ngFor="let item of data.InterviewDetails; index as i"
+        >
           <div class="accordion" id="accordionPanelsStayOpenExample">
             <div class="accordion-item">
-              <h2 class="accordion-header" id="panelsStayOpen-headingOne-{{i}}">
-                <button class="accordion-button" type="button" data-bs-toggle="collapse" [attr.data-bs-target]="'#panelsStayOpen-collapseOne-' + i" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
-                  Interview Round: {{item.interviewId}}
+              <h2
+                class="accordion-header"
+                id="panelsStayOpen-headingOne-{{ i }}"
+              >
+                <button
+                  class="accordion-button"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  [attr.data-bs-target]="'#panelsStayOpen-collapseOne-' + i"
+                  aria-expanded="true"
+                  aria-controls="panelsStayOpen-collapseOne"
+                >
+                  Interview Round: {{ item.interviewId }}
                 </button>
               </h2>
-              <div id="panelsStayOpen-collapseOne-{{i}}" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingOne">
+              <div
+                id="panelsStayOpen-collapseOne-{{ i }}"
+                class="accordion-collapse collapse"
+                aria-labelledby="panelsStayOpen-headingOne"
+              >
                 <div class="accordion-body">
                   <div class="card-header row">
                     <div class="col-12 col-sm-4 col-md-2">
-                      Interview Round: {{item.interviewId}}
+                      Interview Round: {{ item.interviewId }}
                     </div>
-                    <div class=" col-12col-sm-4 col-md-2">
-                      Date: {{item.ScheduleDate}}
+                    <div class="col-12col-sm-4 col-md-2">
+                      Date: {{ item.ScheduleDate }}
                     </div>
                     <div class="result-bar col-12 col-sm-4 col-md-2">
-                      {{item.result}}
+                      {{ item.result }}
                     </div>
                   </div>
-                  <hr>
+                  <hr />
                   <div class="card-body">
                     <div class="review-part">
-                      <div  *ngFor="let review of item.interviewReview">
-                        <p>Interviewer Name: {{review.Name}}</p>
-                        <p>Pros: {{review.Pros}}</p>
-                        <p>Cons: {{review.Cons}}</p>
-                        <p>Comments: {{review.Comments}}</p>
-                        <p class="status">Status: {{review.status}}</p>
-                        <p>Skill: </p>
+                      <div *ngFor="let review of item.interviewReview">
+                        <p>Interviewer Name: {{ review.Name }}</p>
+                        <p>Pros: {{ review.Pros }}</p>
+                        <p>Cons: {{ review.Cons }}</p>
+                        <p>Comments: {{ review.Comments }}</p>
+                        <p class="status">Status: {{ review.status }}</p>
+                        <p>Skill:</p>
                         <div class="skill-set">
                           <div class="card card-body">
                             <div *ngFor="let skill of review.skill">
                               <h6 class="card-title mb-2 mt-3">
                                 <div class="col-12 col-sm-6 col-md-4">
-                                  <p>Category Name: {{skill.skillName}}</p>
+                                  <p>Category Name: {{ skill.skillName }}</p>
                                 </div>
                               </h6>
-                              <div class="card-text" *ngFor="let set of skill.skillset">
+                              <div
+                                class="card-text"
+                                *ngFor="let set of skill.skillset"
+                              >
                                 <div class="row">
                                   <div class="col-12 col-sm-6 col-md-3">
-                                    <p>Skill Name: {{set.skillname}}</p>
+                                    <p>Skill Name: {{ set.skillname }}</p>
                                   </div>
                                   <div class="col-12 col-sm-6 col-md-4">
-                                    <p>Rating: {{set.rating}}</p>
+                                    <p>Rating: {{ set.rating }}</p>
                                   </div>
                                 </div>
                               </div>
                             </div>
                           </div>
-                        </div><br>
+                        </div>
+                        <br />
                       </div>
                     </div>
                   </div>
@@ -95,18 +116,118 @@
         </div>
       </div>
       <div class="result-btn mb-3 mt-2">
-          <button
+        <button
           type="button"
           class="btn btn-danger btn-lg btn-block btn-promote"
         >
           Reject
         </button>
         <button
-        type="button"
-        class="btn btn-primary btn-lg btn-block btn-promote"
-      >
-        Promote
-      </button>
+          type="button"
+          class="btn btn-primary btn-lg btn-block btn-promote"
+        >
+          Promote
+        </button>
+      </div>
     </div>
- </div>
+  </div>
+</div> -->
+
+<div class="applicant-card-wrapper">
+  <div class="header-wrapper">
+    <div class="name">
+      <h5>{{ data.Name }}</h5>
+      <h6>{{ data.AppliedFor }}</h6>
+    </div>
+    <span class="user-pill"> {{ data.Name[0] }}</span>
+  </div>
+  <hr />
+
+  <div class="candidate-detail">
+    <table>
+      <tr>
+        <td class="sub-head">Last Employee</td>
+        <td class="answer">{{ data.LastEmployer }}</td>
+      </tr>
+      <tr>
+        <td class="sub-head">Applied For</td>
+        <td class="answer">{{ data.AppliedFor }}</td>
+      </tr>
+      <tr>
+        <td class="sub-head">ReferedBy</td>
+        <td class="answer">{{ data.ReferedBy }}</td>
+      </tr>
+      <tr>
+        <td class="sub-head">Medical History</td>
+        <td class="answer">{{ data.MedicalStatus }}</td>
+      </tr>
+      <tr>
+        <td class="sub-head">Notice Period</td>
+        <td class="answer">{{ data.NoticePerio }}</td>
+      </tr>
+    </table>
+  </div>
+
+  <hr />
+
+  <div class="interview-review-wrapper">
+    <div
+      class="interview"
+      *ngFor="let interview of data.InterviewDetails; index as i"
+      (click)="openInterviewReview(i)"
+    >
+      <div class="">
+        <p>{{ interview.InterviewRoundId }}</p>
+        <p>{{ interview.result }}</p>
+      </div>
+
+      <p>show more</p>
+
+      <div id="interview-review-{{ i }}" class="interview-review">
+        <div (click)="openInterviewReview(i)">close</div>
+
+        <div
+          class="interviewer-review"
+          *ngFor="let review of interview.interviewReview"
+        >
+          <p class="sub-head">{{ review.Name }}</p>
+
+          <table class="review-table">
+            <tr class="review">
+              <td class="skill-header">Pros:</td>
+              <td class="skill-value">{{ review.Pros }}</td>
+              <td></td>
+            </tr>
+
+            <tr class="review">
+              <td class="skill-header">Cons:</td>
+              <td class="skill-value">{{ review.Cons }}</td>
+              <td></td>
+            </tr>
+
+            <tr class="review">
+              <td class="skill-header">Comments:</td>
+              <td class="skill-value">{{ review.Comments }}</td>
+              <td></td>
+            </tr>
+          </table>
+
+          <div class="review">
+            <p class="skill-header">Skill Rating:</p>
+            <div class="skill-category" *ngFor="let skill of review.skill">
+              <p class="skill-header">{{ skill.skillName }}</p>
+              <table class="table-hover">
+                <tr *ngFor="let skillset of skill.skillset">
+                  <td>{{ skillset.skillname }}</td>
+                  <td>{{ skillset.rating }}</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+
+          <hr />
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

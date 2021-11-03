@@ -3,24 +3,22 @@ import * as dummydata from '../../../../dummydata/data.json';
 @Component({
   selector: 'app-applicant-card',
   templateUrl: './applicant-card.component.html',
-  styleUrls: ['./applicant-card.component.scss']
+  styleUrls: ['./applicant-card.component.scss'],
 })
 export class ApplicantCardComponent implements OnInit {
+  data: any = dummydata;
 
- data :any = dummydata;
+  constructor() {}
 
-  constructor() { }
+  ngOnInit(): void {}
 
-  ngOnInit(): void {
+  openInterviewReview(index: number) {
+    let element = document.getElementById(`interview-review-${index}`);
+
+    if (element?.className === `interview-review show-review`) {
+      element.classList.remove('show-review');
+    } else {
+      element?.classList.add('show-review');
+    }
   }
-
-  addEventHandler(){
-    let element = document.getElementsByClassName('ps__rail-y')[0] as HTMLElement;
-    element.addEventListener('click', this.scroll, true);
-  }
-  
-  scroll(e:Event){
-    e.stopPropagation();
-  }
-
 }

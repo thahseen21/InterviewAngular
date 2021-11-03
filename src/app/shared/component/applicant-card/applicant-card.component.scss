@@ -1,97 +1,103 @@
 @import "../../../../scss/variables";
 
 .applicant-card-wrapper {
+  // background-color: pink;
+  padding: 2rem 1rem 1rem 2rem;
   position: relative;
-  height: fit-content;
+}
 
-  .main-card{
-    padding: 1rem;
+.header-wrapper {
+  display: flex;
+  justify-content: space-between;
+  .user-pill {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3rem;
+    height: 3rem;
+    margin: 0px;
+    border-radius: 50%;
   }
+}
 
-  .card{
-      background-color: $card-bg;
-      border-radius: 1rem;
+.candidate-detail {
+  table {
+    width: 100%;
+    text-align: center;
+    height: 100%;
+
+    .sub-head {
+      text-align: right;
+      padding-right: 1rem;
+      font-size: $p-font-size-small;
+      color: $secondary-text;
+      margin-bottom: 8px;
+    }
+
+    .answer {
+      text-align: left;
+      padding-left: 1rem;
+      font-size: $p-font-size-small;
+      margin-bottom: 8px;
+    }
   }
+}
 
-  .name,
-  .position {
-    position: relative;
-    top: 1rem;
-    left: 2rem;
-    font-weight: $bold;
-  }
-
-  .profile {
-    position: relative;
-    top: 1rem;
-    right: 2rem;
-  }
-
-  .header-section {
+.interview-review-wrapper {
+  .interview {
     display: flex;
     justify-content: space-between;
+    cursor: pointer;
   }
 
-  .user-pill {
-    background-color: $link-color-active-bg;
-    color: $link-color-active;
-    min-height: 3rem;
-    min-width: 3rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    font-size: 2rem;
-    font-weight: $bold;
+  .interview-review {
+    display: none;
   }
 
-  .info {
-    display: flex;
-    flex-direction: column;
-    margin: 0;
-    gap: 1rem;
-    padding: 2rem 5rem;
+  .show-review {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 86vh;
+    overflow-y: scroll;
+    background-color: peachpuff;
+    z-index: 100;
+    border-radius: 2rem;
+    padding: 2rem 1rem 0rem 2rem;
   }
 
-  .review-status-bar {
-
-    .btn-promote {
-        width: 100%;
+  .interviewer-review {
+    .sub-head {
+      font-size: $p-font-size-medium;
+      font-weight: $extra-bold;
     }
 
-    p{
-        padding-left: 1rem;
-    }
+    .review {
+      line-height: 2rem;
 
-    .scrollable-menu {
-      height: auto;
-      max-height: 200px;
-      overflow-x: hidden;
-    }
-
-    .card-title, .card-header{
-      display: flex;
-      gap: 2rem;
-      background: none;
-      border: none;
-
-      .result-bar{
-        border: 1px solid;
-        min-width: 5rem;
+      .skill-header {
+        font-size: $p-font-size-small;
         font-weight: $bold;
-        border-radius: 3rem;
-        display: flex;
-        justify-content: center;
-        background-color: $link-color-active-bg;
-        color: $link-color-active;
+        margin: 0px;
+        padding: 0%;
       }
 
-    }
+      .skill-value {
+        font-size: $p-font-size-small;
+        margin: 0px;
+        padding: 0%;
+      }
 
+      .skill-category {
+        margin-top: 1rem;
+        margin-left: 3rem;
+      }
+    }
   }
 
-  .result-btn {
-    display: flex;
-    align-items: stretch;
+  .interviewer-review:not(:nth-child(2)) {
+    margin-top: 2rem;
   }
 }

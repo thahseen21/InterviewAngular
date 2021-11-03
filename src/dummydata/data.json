@@ -1,140 +1,143 @@
-{"applicantId": 200,
-"Name": "potato",
-"LastEmployer": "ABC Company",
-"Designation": "Tech lead",
-"AppliedFor": "Developer",
-"ReferredBy": "Vishwa",
-"MedicalStatus": null,
-"NoticePeriod": 3,
-"Resume": null,
-"InterviewDetails": [
-  {
-    "interviewId": 1,
-    "InterviewRoundId": 1,
-    "ScheduleDate": "2021-10-29",
-    "result": "pass",
-    "interviewReview": [
-      {
-        "EmployeeInterviewId": 1, "Name": "Madhan",
-        "reviewId": 1,
-        "Pros": "good",
-        "Cons": "less in logical thinking",
-        "Comments": "very good perfomance",
-        "status": 1,
-        "skill": [
-          {
-            "skillCategoryid": 1,
-            "skillName": "technical skill",
-            "skillset": [
-              { "skillid": 1, "skillname": "Logic", "rating": 1 },
-              { "skillid": 2, "skillname": "Problem Solving", "rating": 1 },
-              { "skillid": 3, "skillname": "Reasoning", "rating": 1 }
-            ]
-          },
-          {
-            "skillCategoryid": 1,
-            "skillName": "Soft skill",
-            "skillset": [
-              { "skillid": 1, "skillname": "Logic", "rating": 1 },
-              { "skillid": 2, "skillname": "Problem Solving", "rating": 1 },
-              { "skillid": 3, "skillname": "Reasoning", "rating": 1 }
-            ]
-          }
-        ]
-      },
-      {
-        "EmployeeInterviewId": 2,
-        "reviewId": 2,
-        "Pros": "good",
-        "Cons": "less in logical thinking",
-        "Comments": "very good perfomance",
-        "status": 1,
-        "skill": [
-          {
-            "skillCategoryid": 1,
-            "skillName": "technical skill",
-            "skillset": [
-              { "skillid": 1, "skillname": "Logic", "rating": 1 },
-              { "skillid": 2, "skillname": "Problem Solving", "rating": 1 },
-              { "skillid": 3, "skillname": "Reasoning", "rating": 1 }
-            ]
-          },
-          {
-            "skillCategoryid": 1,
-            "skillName": "Soft skill",
-            "skillset": [
-              { "skillid": 1, "skillname": "Logic", "rating": 1 },
-              { "skillid": 2, "skillname": "Problem Solving", "rating": 1 },
-              { "skillid": 3, "skillname": "Reasoning", "rating": 1 }
-            ]
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "interviewId": 2,
-    "InterviewRoundId": 1,
-    "ScheduleDate": "2021-10-29",
-    "result": "fail",
-    "interviewReview": [
-      {
-        "EmployeeInterviewId": 1,
-        "reviewId": 1,
-        "Pros": "good",
-        "Cons": "less in logical thinking",
-        "Comments": "very good perfomance",
-        "status": 1,
-        "skill": [
-          {
-            "skillCategoryid": 1,
-            "skillName": "technical skill",
-            "skillset": [
-              { "skillid": 1, "skillname": "Logic", "rating": 1 },
-              { "skillid": 2, "skillname": "Problem Solving", "rating": 1 },
-              { "skillid": 3, "skillname": "Reasoning", "rating": 1 }
-            ]
-          },
-          {
-            "skillCategoryid": 1,
-            "skillName": "Soft skill",
-            "skillset": [
-              { "skillid": 1, "skillname": "Logic", "rating": 1 },
-              { "skillid": 2, "skillname": "Problem Solving", "rating": 1 },
-              { "skillid": 3, "skillname": "Reasoning", "rating": 1 }
-            ]
-          }
-        ]
-      },
-      {
-        "EmployeeInterviewId": 2,
-        "reviewId": 2,
-        "Pros": "good",
-        "Cons": "less in logical thinking",
-        "Comments": "very good perfomance",
-        "status": 1,
-        "skill": [
-          {
-            "skillCategoryid": 1,
-            "skillName": "technical skill",
-            "skillset": [
-              { "skillid": 1, "skillname": "Logic", "rating": 1 },
-              { "skillid": 2, "skillname": "Problem Solving", "rating": 1 },
-              { "skillid": 3, "skillname": "Reasoning", "rating": 1 }
-            ]
-          },
-          {
-            "skillCategoryid": 1,
-            "skillName": "Soft skill",
-            "skillset": [
-              { "skillid": 1, "skillname": "Logic", "rating": 1 },
-              { "skillid": 2, "skillname": "Problem Solving", "rating": 1 },
-              { "skillid": 3, "skillname": "Reasoning", "rating": 1 }
-            ]
-          }
-        ]
-      }
-    ]
-  }
-]
+{
+  "applicantId": 200,
+  "Name": "potato",
+  "LastEmployer": "ABC Company",
+  "Designation": "Tech lead",
+  "AppliedFor": "Developer",
+  "ReferredBy": "Vishwa",
+  "MedicalStatus": null,
+  "NoticePeriod": 3,
+  "Resume": null,
+  "InterviewDetails": [
+    {
+      "interviewId": 1,
+      "InterviewRoundId": 1,
+      "ScheduleDate": "2021-10-29",
+      "result": "pass",
+      "interviewReview": [
+        {
+          "EmployeeInterviewId": 1,
+          "Name": "Madhan",
+          "reviewId": 1,
+          "Pros": "good",
+          "Cons": "less in logical thinking",
+          "Comments": "very good perfomance",
+          "status": 1,
+          "skill": [
+            {
+              "skillCategoryid": 1,
+              "skillName": "technical skill",
+              "skillset": [
+                { "skillid": 1, "skillname": "Logic", "rating": 1 },
+                { "skillid": 2, "skillname": "Problem Solving", "rating": 1 },
+                { "skillid": 3, "skillname": "Reasoning", "rating": 1 }
+              ]
+            },
+            {
+              "skillCategoryid": 1,
+              "skillName": "Soft skill",
+              "skillset": [
+                { "skillid": 1, "skillname": "Logic", "rating": 1 },
+                { "skillid": 2, "skillname": "Problem Solving", "rating": 1 },
+                { "skillid": 3, "skillname": "Reasoning", "rating": 1 }
+              ]
+            }
+          ]
+        },
+        {
+          "EmployeeInterviewId": 2,
+          "Name": "Madhan2",
+          "reviewId": 2,
+          "Pros": "good",
+          "Cons": "less in logical thinking",
+          "Comments": "very good perfomance",
+          "status": 1,
+          "skill": [
+            {
+              "skillCategoryid": 1,
+              "skillName": "technical skill",
+              "skillset": [
+                { "skillid": 1, "skillname": "Logic", "rating": 1 },
+                { "skillid": 2, "skillname": "Problem Solving", "rating": 1 },
+                { "skillid": 3, "skillname": "Reasoning", "rating": 1 }
+              ]
+            },
+            {
+              "skillCategoryid": 1,
+              "skillName": "Soft skill",
+              "skillset": [
+                { "skillid": 1, "skillname": "Logic", "rating": 1 },
+                { "skillid": 2, "skillname": "Problem Solving", "rating": 1 },
+                { "skillid": 3, "skillname": "Reasoning", "rating": 1 }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "interviewId": 2,
+      "InterviewRoundId": 2,
+      "ScheduleDate": "2021-10-29",
+      "result": "fail",
+      "interviewReview": [
+        {
+          "EmployeeInterviewId": 1,
+          "reviewId": 1,
+          "Pros": "good",
+          "Cons": "less in logical thinking",
+          "Comments": "very good perfomance",
+          "status": 1,
+          "skill": [
+            {
+              "skillCategoryid": 1,
+              "skillName": "technical skill",
+              "skillset": [
+                { "skillid": 1, "skillname": "Logic", "rating": 1 },
+                { "skillid": 2, "skillname": "Problem Solving", "rating": 1 },
+                { "skillid": 3, "skillname": "Reasoning", "rating": 1 }
+              ]
+            },
+            {
+              "skillCategoryid": 1,
+              "skillName": "Soft skill",
+              "skillset": [
+                { "skillid": 1, "skillname": "Logic", "rating": 1 },
+                { "skillid": 2, "skillname": "Problem Solving", "rating": 1 },
+                { "skillid": 3, "skillname": "Reasoning", "rating": 1 }
+              ]
+            }
+          ]
+        },
+        {
+          "EmployeeInterviewId": 2,
+          "reviewId": 2,
+          "Pros": "good",
+          "Cons": "less in logical thinking",
+          "Comments": "very good perfomance",
+          "status": 1,
+          "skill": [
+            {
+              "skillCategoryid": 1,
+              "skillName": "technical skill",
+              "skillset": [
+                { "skillid": 1, "skillname": "Logic", "rating": 1 },
+                { "skillid": 2, "skillname": "Problem Solving", "rating": 1 },
+                { "skillid": 3, "skillname": "Reasoning", "rating": 1 }
+              ]
+            },
+            {
+              "skillCategoryid": 1,
+              "skillName": "Soft skill",
+              "skillset": [
+                { "skillid": 1, "skillname": "Logic", "rating": 1 },
+                { "skillid": 2, "skillname": "Problem Solving", "rating": 1 },
+                { "skillid": 3, "skillname": "Reasoning", "rating": 1 }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }
