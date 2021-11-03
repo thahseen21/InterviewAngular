@@ -30,9 +30,27 @@
           Interviews
         </button>
         <div class="dropdown-menu dropdown-menu-right">
-          <button class="dropdown-item" type="button">All</button>
-          <button class="dropdown-item" type="button">Scheduled</button>
-          <button class="dropdown-item" type="button">Non-Scheduled</button>
+          <button
+            class="dropdown-item"
+            type="button"
+            (click)="filterCandidateList('a')"
+          >
+            All
+          </button>
+          <button
+            class="dropdown-item"
+            type="button"
+            (click)="filterCandidateList('s')"
+          >
+            Scheduled
+          </button>
+          <button
+            class="dropdown-item"
+            type="button"
+            (click)="filterCandidateList('ns')"
+          >
+            Non-Scheduled
+          </button>
         </div>
       </div>
     </div>
@@ -40,7 +58,7 @@
   <div class="card-view-container">
     <div class="card-view-wrapper">
       <app-card-view
-        *ngFor="let item of candidateDetailList"
+        *ngFor="let item of list"
         [candidateDetail]="item"
       ></app-card-view>
     </div>

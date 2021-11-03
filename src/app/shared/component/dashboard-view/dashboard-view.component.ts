@@ -8,9 +8,29 @@ import { Component, Input, OnInit } from '@angular/core';
 export class DashboardViewComponent implements OnInit {
   @Input() candidateDetailList: any;
 
+  list: any;
+
   constructor() {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.list = this.candidateDetailList;
+  }
 
-  list: any[] = ['H', 'T', 1, 1, 1, 1, 1, 1, 1];
+  filterCandidateList(data: string) {
+    switch (data) {
+      case 's':
+        this.list = this.candidateDetailList.filter(
+          (candidateDetail: any) => candidateDetail.InterviewAt !== null
+        );
+        break;
+      case 'ns':
+        this.list = this.candidateDetailList.filter(
+          (candidateDetail: any) => candidateDetail.InterviewAt === null
+        );
+        break;
+      default:
+        this.list = this.candidateDetailList;
+    }
+    console.log('list', this.list);
+  }
 }
