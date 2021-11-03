@@ -14,13 +14,4 @@ export class ApplicantCardComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  addEventHandler(){
-    let element = document.getElementsByClassName('ps__rail-y')[0] as HTMLElement;
-    element.addEventListener('click', this.scroll, true);
-  }
-  
-  scroll(e:Event){
-    e.stopPropagation();
-  }
-
 }
