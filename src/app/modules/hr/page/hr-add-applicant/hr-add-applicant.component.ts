@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HrAddApplicantComponent implements OnInit {
 
+
+  fileName: string= '';
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  onFileSelected(event: any){
+    
   }
 
 }
