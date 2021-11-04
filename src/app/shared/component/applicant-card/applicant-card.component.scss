@@ -1,7 +1,6 @@
 @import "../../../../scss/variables";
 
 .applicant-card-wrapper {
-  // background-color: pink;
   padding: 2rem 1rem 1rem 2rem;
   position: relative;
 }
@@ -9,6 +8,19 @@
 .header-wrapper {
   display: flex;
   justify-content: space-between;
+
+  h5 {
+    font-size: $p-font-size-large;
+    font-weight: $extra-bold;
+    text-transform: capitalize;
+  }
+
+  h6 {
+    font-size: $p-font-size-tiny;
+    font-weight: $bold;
+    color: $secondary-text-color;
+  }
+
   .user-pill {
     display: flex;
     align-items: center;
@@ -29,17 +41,18 @@
 
     .sub-head {
       text-align: right;
-      padding-right: 1rem;
-      font-size: $p-font-size-small;
+      padding-right: 0.5rem;
+      line-height: 2rem;
       color: $secondary-text-color;
-      margin-bottom: 8px;
+      font-size: $p-font-size-tiny;
+      font-weight: $bold;
     }
 
     .answer {
       text-align: left;
-      padding-left: 1rem;
+      padding-left: 0.5rem;
       font-size: $p-font-size-small;
-      margin-bottom: 8px;
+      font-weight: $bold;
     }
   }
 }
@@ -54,10 +67,13 @@
     box-shadow: 1px 1px 3px 0px;
     transition: box-shadow 500ms;
     border-radius: 10px;
-    font-size: $p-font-size-small;
+    font-size: $p-font-size-tiny;
+    font-weight: $extra-bold;
 
     .show-more {
+      color: $secondary-text-color;
       font-size: $p-font-size-extra-small;
+      font-weight: $extra-bold;
     }
   }
 
