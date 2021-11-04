@@ -10,6 +10,7 @@ import { AddInterviewerFormComponent } from 'src/app/shared/component/add-interv
 import { ModalComponent } from 'src/app/shared/component/modal/modal.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HrAddApplicantComponent } from './page/hr-add-applicant/hr-add-applicant.component';
+import { AddApplicantComponent } from 'src/app/shared/component/add-applicant/add-applicant.component';
 
 @NgModule({
   declarations: [
@@ -19,8 +20,9 @@ import { HrAddApplicantComponent } from './page/hr-add-applicant/hr-add-applican
     CardViewComponent,
     AddInterviewerFormComponent,
     ModalComponent,
-    HrAddApplicantComponent
-  ],
+    HrAddApplicantComponent,
+    AddApplicantComponent
+    ],
   imports: [CommonModule, HrRoutingModule, ReactiveFormsModule],
 })
 export class HrModule {}
