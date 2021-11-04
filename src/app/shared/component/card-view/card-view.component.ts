@@ -34,7 +34,7 @@ export class CardViewComponent implements OnInit, AfterViewInit {
 
     this.currentRoundName = this.interviewRoundData.filter(
       (round: any) => round.roundOrder === this.candidateDetail.CurrentRound
-    );
+    )[0];
   }
 
   ngAfterViewInit() {
