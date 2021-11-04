@@ -2,20 +2,21 @@
 
 .card-view-container {
   background-color: $card-bg-color;
-  padding: 0.5rem;
   color: $primary-text-color;
   border-radius: 1rem;
+  padding: 1rem;
 }
 
 .card-view-container {
   .applied-date {
     color: $secondary-text-color;
-    font-weight: $dark;
+    font-size: $p-font-size-tiny;
+    font-weight: $extra-bold;
   }
 
   .candidate-box {
     text-align: center;
-    margin: 2rem 0rem;
+    margin: 1.5rem 0rem;
 
     .candidate-box-name {
       color: $primary-text-color;
@@ -24,14 +25,13 @@
     }
     .candidate-box-designation {
       color: $primary-text-color;
-      font-weight: $bold;
       font-size: $p-font-size-small;
-      margin-top: 6px;
+      font-weight: $bold;
     }
   }
 
   .progress-box {
-    margin: 1rem 0rem;
+    margin: 1rem 0rem 1.5rem 0rem;
     text-align: center;
 
     .progress-bar {
@@ -81,8 +81,8 @@
       }
     }
     .progress-box-round-header {
-      font-size: $p-font-size-extra-small;
-      font-weight: bold;
+      font-size: $p-font-size-tiny;
+      font-weight: $bold;
       text-align: right;
       width: 100%;
     }
@@ -105,8 +105,8 @@
         display: flex;
         background-color: darken($card-bg-color, 60%);
         color: white;
-        min-width: 2.5rem;
-        height: 2.5rem;
+        min-width: 2rem;
+        height: 2rem;
         border-radius: 50%;
         justify-content: center;
         align-items: center;
@@ -116,13 +116,14 @@
     .interviewer {
       background-color: darken($card-bg-color, 20%);
       margin-right: 2px;
-      min-width: 2.5rem;
-      height: 2.5rem;
+      min-width: 2rem;
+      height: 2rem;
       border-radius: 50%;
       display: flex;
       justify-content: center;
       align-items: center;
-      font-size: $p-font-size-large;
+      font-size: $p-font-size-tiny;
+      font-weight: $extra-bold;
     }
 
     .days-left {
