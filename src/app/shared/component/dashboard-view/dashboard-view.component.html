@@ -4,21 +4,21 @@
       <span class="header">Interviews</span>
       <div class="schedule-detail">
         <div class="interview-in-progress">
-          <p class="sub-header">45</p>
+          <p class="sub-header">{{ inProgress }}</p>
           <p class="text">In Progress</p>
         </div>
         <div class="interview-scheduled">
-          <p class="sub-header">25</p>
+          <p class="sub-header">{{ scheduledCount }}</p>
           <p class="text">Scheduled</p>
         </div>
         <div class="non-scheduled">
-          <p class="sub-header">20</p>
+          <p class="sub-header">{{ nonScheduledCount }}</p>
           <p class="text">Non-Scheduled</p>
         </div>
       </div>
     </div>
     <div class="right-section-wrapper">
-      <span class="text">Decemeber,12</span>
+      <span class="text">{{ today | date: "MMMM,dd" }}</span>
       <div class="dropdown">
         <button
           type="button"

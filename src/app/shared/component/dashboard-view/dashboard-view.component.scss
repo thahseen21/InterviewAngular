@@ -1,25 +1,4 @@
-$card-bg-color: #d7ddfe;
-$primary-text-color: #363243;
-$secondary-text-color: #818181;
-$white-text-color: #ffffff;
-
-$p-font-size-extra-small: 0.6rem;
-$p-font-size-small: 1rem;
-$p-font-size-medium: 1.14rem;
-$p-font-size-large: 1.29rem;
-
-$h1-font-size-small: 1.47rem;
-
-$bold: 600;
-$extra-bold: 700;
-$dark: 500;
-$regular: 400;
-$light: 300;
-$extra-light: 300;
-
-body {
-  font-size: 14px;
-}
+@import "../../../../scss/variables.scss";
 
 .dashboard-container {
   padding: 2rem 1rem 0rem 2rem;
@@ -41,7 +20,8 @@ body {
       margin: 0px;
     }
     .text {
-      font-size: $p-font-size-small;
+      font-size: $p-font-size-tiny;
+      color: $secondary-text-color;
       font-weight: $bold;
       margin: 0px;
     }
@@ -74,7 +54,7 @@ body {
 
 .card-view-wrapper {
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 1rem;
   margin-top: 2rem;
   overflow-y: scroll;
