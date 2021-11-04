@@ -7,7 +7,7 @@
 
 .app-dashboard-view {
   flex: 0.9;
-  background-color: $secondary-bg;
+  background-color: $secondary-bg-color;
   border-radius: 2rem;
   margin-right: 0.5rem;
 }
@@ -15,7 +15,7 @@
 .app-applicant-card {
   flex: 0.3;
   border-radius: 2rem;
-  background-color: $secondary-bg;
+  background-color: $secondary-bg-color;
 }
 
 :host {
