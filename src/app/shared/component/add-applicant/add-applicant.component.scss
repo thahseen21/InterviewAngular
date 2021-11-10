@@ -29,7 +29,7 @@
             margin-top: 1.5rem;
         }
     
-        input{
+        input, select{
             border: none;
             border-bottom: 1px solid #ced4da;
             border-radius: 0;
@@ -42,6 +42,7 @@
                     color: #007bff;
                 }
             }
+
         }
 
     }

@@ -57,13 +57,23 @@ export class AddApplicantComponent implements OnInit {
     }
   };
 
+  designationList: any[] = [
+  {"DesignationId":1, "Designation": "Junoir Devloper" },
+  {"DesignationId":2, "Designation": "Senior Devloper" },
+  {"DesignationId":3, "Designation": "Junior Testor" },
+  {"DesignationId":4, "Designation": "Senior Testor" },
+  {"DesignationId":5, "Designation": "System Admin" }
+];
+
+employeeList: [] = [];
+
   ngOnInit(): void {
     this.applicantForm = this.fb.group({
       name:['',[Validators.required, Validators.minLength(3), Validators.maxLength(20)]],
       lastEmployer: ['', [Validators.required, Validators.maxLength(30)]],
-      lastDesignation: ['', [Validators.required, Validators.maxLength(15)]],
-      appliedFor: ['', [Validators.required, Validators.maxLength(15)]],
-      referedBy: ['', Validators.maxLength(20)],
+      lastDesignation: ['', [Validators.required, Validators.maxLength(30)]],
+      appliedFor: ['', Validators.required],
+      referedBy: ['', ],
       medicalStatus: ['', Validators.maxLength(100)],
       noticePeriod: ['', Validators.required],
       resume: ['', Validators.required]

@@ -59,13 +59,10 @@ autocomplete="off"
     <span class="help-block text-danger" *ngIf="formErrors.appliedFor">
       {{formErrors.appliedFor}}
     </span>
-    <input
-      type="text"
-      class="form-control"
-      name="appliedfor"
-      formControlName="appliedFor"
-      (blur)="logValidationErrors()"
-    />
+    <select class="form-select" formControlName="appliedFor" (blur)="logValidationErrors()">
+      <option></option>
+      <option *ngFor="let item of designationList" value="{{item.DesignationId}}">{{item.Designation}}</option>
+    </select>
     <label class="form-lable" for="appliedfor">Applied For *</label>
   </div>
 
@@ -102,12 +99,12 @@ autocomplete="off"
     <span class="help-block text-danger" *ngIf="formErrors.referedBy">
       {{formErrors.referedBy}}
     </span>
-    <input
-      type="text"
-      class="form-control"
-      name="referedby"
-      formControlName="referedBy"
-    />
+
+    <select class="form-select" formControlName="referedBy" (blur)="logValidationErrors()">
+      <option></option>
+      <option *ngFor="let employee of employeeList" value="{{employee}}">{{employee}}</option>
+    </select>
+
     <label class="form-lable" for="referedby">Refered By</label>
   </div>
 </div>
