@@ -16,7 +16,8 @@ export class AddApplicantComponent implements OnInit {
   fileName = '';
 
   formErrors: any={
-    'name':'',
+    'firstName':'',
+    'lastName':'',
     'lastEmployer':'',
     'lastDesignation':'',
     'appliedFor':'',
@@ -26,9 +27,12 @@ export class AddApplicantComponent implements OnInit {
   };
 
   validationMessages: any ={
-    'name':{
+    'firstName':{
+      'required':'First Name is required.',
+      'maxlength':'First Name must be less than 20 characters'
+    },
+    'lastName':{
       'required':'Name is required.',
-      'minlength':'Name must be greater than 2 characters.',
       'maxlength':'Name must be less than 20 characters'
     },
     'lastEmployer':{
@@ -69,7 +73,8 @@ employeeList: [] = [];
 
   ngOnInit(): void {
     this.applicantForm = this.fb.group({
-      name:['',[Validators.required, Validators.minLength(3), Validators.maxLength(20)]],
+      firstName:['',[Validators.required, Validators.maxLength(20)]],
+      lastName:['',[Validators.required, Validators.maxLength(20)]],
       lastEmployer: ['', [Validators.required, Validators.maxLength(30)]],
       lastDesignation: ['', [Validators.required, Validators.maxLength(30)]],
       appliedFor: ['', Validators.required],

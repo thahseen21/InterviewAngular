@@ -5,23 +5,37 @@ autocomplete="off"
 (ngSubmit)="onSubmit()"
 >
 <h5 class="text-primary mt-0 mb-0">Applicant Details</h5>
+
 <hr />
 
-<div class="row align-items-center">
-  <div class="col-12 col-md-4 form-group" [ngClass]="{'has-error': formErrors.name}">
+<div class="row align-items-center mt-3">
+  <div class="col-12 col-md-4 form-group" [ngClass]="{'has-error': formErrors.firstName}">
     
-    <span class="help-block text-danger" *ngIf="formErrors.name">
-      {{formErrors.name}}
+    <span class="help-block text-danger" *ngIf="formErrors.firstName">
+      {{formErrors.firstName}}
+    </span>
+    <input
+      type="text"
+      class="form-control"
+      name="firstname"
+      formControlName="firstName"
+      (blur)="logValidationErrors()"
+    />
+    <label class="form-label" for="firstname">First Name *</label>
+  </div>
+
+  <div class="col-12 col-md-4 second-lable form-group" [ngClass]="{'has-error': formErrors.lastName}"> 
+    <span class="help-block text-danger" *ngIf="formErrors.lastName">
+      {{formErrors.lastName}}
     </span>
     <input
       type="text"
       class="form-control"
       name="name"
-      formControlName="name"
+      formControlName="lastName"
       (blur)="logValidationErrors()"
     />
-    <label class="form-label" for="name">Name *</label>
-
+    <label class="form-label" for="name">Last Name *</label>
   </div>
 </div>
 
