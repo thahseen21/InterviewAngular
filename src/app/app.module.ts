@@ -8,6 +8,7 @@ import { FooterComponent } from './layout/footer/footer.component';
 import { SidebarComponent } from './layout/sidebar/sidebar.component';
 import { SearchBarComponent } from './shared/component/search-bar/search-bar.component';
 import { ContentLayoutComponent } from './layout/content-layout/content-layout.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,7 @@ import { ContentLayoutComponent } from './layout/content-layout/content-layout.c
     SearchBarComponent,
     ContentLayoutComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],
 })

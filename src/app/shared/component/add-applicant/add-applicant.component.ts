@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { data } from 'jquery';
+import { ApiEndpointService } from 'src/app/core/service/api-endpoint.service';
+import { HttpService } from 'src/app/core/service/http.service';
 
 @Component({
   selector: 'app-add-applicant',
@@ -9,7 +12,11 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 export class AddApplicantComponent implements OnInit {
 
 
-  constructor(private fb: FormBuilder) { }
+  constructor(
+    private fb: FormBuilder,
+    private apiEndPointService: ApiEndpointService,
+    private httpService: HttpService
+    ) { }
 
   applicantForm: FormGroup=new FormGroup({});
 
@@ -61,17 +68,12 @@ export class AddApplicantComponent implements OnInit {
     }
   };
 
-  designationList: any[] = [
-  {"DesignationId":1, "Designation": "Junoir Devloper" },
-  {"DesignationId":2, "Designation": "Senior Devloper" },
-  {"DesignationId":3, "Designation": "Junior Testor" },
-  {"DesignationId":4, "Designation": "Senior Testor" },
-  {"DesignationId":5, "Designation": "System Admin" }
-];
-
-employeeList: [] = [];
-
   ngOnInit(): void {
+
+    
+    this.getUser();
+    this.getDesignation();
+
     this.applicantForm = this.fb.group({
       firstName:['',[Validators.required, Validators.maxLength(20)]],
       lastName:['',[Validators.required, Validators.maxLength(20)]],
@@ -88,6 +90,7 @@ employeeList: [] = [];
     this.applicantForm.valueChanges.subscribe((data) => {
       this.logValidationErrors(this.applicantForm);
     })
+
   }
 
     //Validation function
@@ -129,4 +132,28 @@ employeeList: [] = [];
   }
 
 
+  getUser() {
+    this.httpService.get(this.apiEndPointService.getUser())
+    .subscribe((data) =>{
+      console.log('data');
+
+      console.log(data);
+      this.userList.push(...data);
+    })
+  };
+
+  getDesignation() {
+    this.httpService.get(this.apiEndPointService.getDesignation())
+    .subscribe((data) => {
+      console.log('data');
+
+      console.log(data);
+      this.designationList.push(...data);
+    })
+  };
+
+  
+  designationList: {designationID: number, designation: string}[] = [];
+
+  userList: {userID: number, name: string}[] = [];
 }

@@ -75,7 +75,7 @@ autocomplete="off"
     </span>
     <select class="form-select" formControlName="appliedFor" (blur)="logValidationErrors()">
       <option></option>
-      <option *ngFor="let item of designationList" value="{{item.DesignationId}}">{{item.Designation}}</option>
+      <option *ngFor="let item of designationList" value="{{item.designationID}}">{{item.designation}}</option>
     </select>
     <label class="form-lable" for="appliedfor">Applied For *</label>
   </div>
@@ -116,7 +116,7 @@ autocomplete="off"
 
     <select class="form-select" formControlName="referedBy" (blur)="logValidationErrors()">
       <option></option>
-      <option *ngFor="let employee of employeeList" value="{{employee}}">{{employee}}</option>
+      <option *ngFor="let user of userList" value="{{user.userID}}">{{user.name}}</option>
     </select>
 
     <label class="form-lable" for="referedby">Refered By</label>
