@@ -3,6 +3,7 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { data } from 'jquery';
 import { ApiEndpointService } from 'src/app/core/service/api-endpoint.service';
 import { HttpService } from 'src/app/core/service/http.service';
+import { AddApplicant } from 'src/app/data/schema/add-applicant';
 
 @Component({
   selector: 'app-add-applicant',
@@ -21,6 +22,25 @@ export class AddApplicantComponent implements OnInit {
   applicantForm: FormGroup=new FormGroup({});
 
   fileName = '';
+
+    
+  designationList: {designationID: number, designation: string}[] = [];
+
+  userList: {userID: number, name: string}[] = [];
+
+  applicant: AddApplicant = {
+    userID: 0,
+    applicantID: 0,
+    firstName: '',
+    lastName: '',
+    lastEmployer:'',
+    lastDesignation:'',
+    appliedFor: 0,
+    referedBy: 0,
+    medicalStatus:'',
+    noticePeriod:0,
+    resume:''
+  };
 
   formErrors: any={
     'firstName':'',
@@ -75,6 +95,8 @@ export class AddApplicantComponent implements OnInit {
     this.getDesignation();
 
     this.applicantForm = this.fb.group({
+      applicantID:[0],
+      userID:[1],
       firstName:['',[Validators.required, Validators.maxLength(20)]],
       lastName:['',[Validators.required, Validators.maxLength(20)]],
       lastEmployer: ['', [Validators.required, Validators.maxLength(30)]],
@@ -128,16 +150,17 @@ export class AddApplicantComponent implements OnInit {
   }
 
   onSubmit(): void {
-    console.log(this.applicantForm.value);
+    console.log('On submit')
+    this.mapFormValuestoApplicantModel();
+    
+    console.log(this.applicant)
+    this.httpService.post(this.apiEndPointService.addApplicant(),{},this.applicant).subscribe();
   }
 
 
   getUser() {
     this.httpService.get(this.apiEndPointService.getUser())
     .subscribe((data) =>{
-      console.log('data');
-
-      console.log(data);
       this.userList.push(...data);
     })
   };
@@ -145,15 +168,20 @@ export class AddApplicantComponent implements OnInit {
   getDesignation() {
     this.httpService.get(this.apiEndPointService.getDesignation())
     .subscribe((data) => {
-      console.log('data');
-
-      console.log(data);
       this.designationList.push(...data);
     })
   };
 
-  
-  designationList: {designationID: number, designation: string}[] = [];
-
-  userList: {userID: number, name: string}[] = [];
+  mapFormValuestoApplicantModel() {
+    this.applicant.userID = this.applicantForm.value.userID;
+    this.applicant.applicantID = this.applicantForm.value.applicantID;
+    this.applicant.firstName = this.applicantForm.value.firstName;
+    this.applicant.lastName = this.applicantForm.value.lastName;
+    this.applicant.lastDesignation = this.applicantForm.value.lastDesignation;
+    this.applicant.lastEmployer = this.applicantForm.value.lastEmployer;
+    this.applicant.appliedFor = this.applicantForm.value.appliedFor;
+    this.applicant.referedBy = this.applicantForm.value.referedBy;
+    this.applicant.noticePeriod = this.applicantForm.value.noticePeriod;
+    this.applicant.resume = this.applicantForm.value.resume;
+  }
 }

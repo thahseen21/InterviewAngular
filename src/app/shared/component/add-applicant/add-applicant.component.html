@@ -9,6 +9,22 @@ autocomplete="off"
 <hr />
 
 <div class="row align-items-center mt-3">
+  <input
+  type="number"
+  class="form-control"
+  name="applicantId"
+  formControlName="applicantID"
+  value= ""
+  hidden
+/>
+<input
+type="number"
+class="form-control"
+name="userId"
+formControlName="userID"
+value= ""
+hidden
+/>
   <div class="col-12 col-md-4 form-group" [ngClass]="{'has-error': formErrors.firstName}">
     
     <span class="help-block text-danger" *ngIf="formErrors.firstName">
@@ -140,6 +156,7 @@ autocomplete="off"
 
       <button
         mat-mini-fab
+        type="button"
         color="primary"
         class="upload-btn btn btn-primary"
         (click)="fileUpload.click()"
