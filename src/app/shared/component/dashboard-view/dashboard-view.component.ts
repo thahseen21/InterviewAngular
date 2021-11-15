@@ -9,11 +9,11 @@ export class DashboardViewComponent implements OnInit {
   @Input() candidateDetailList: any;
 
   list: any;
-  
+
   inProgress: number = 0;
   scheduledCount: number = 0;
   nonScheduledCount: number = 0;
-  
+
   today: number = Date.now();
 
   constructor() {}
@@ -24,7 +24,7 @@ export class DashboardViewComponent implements OnInit {
     this.inProgress = this.candidateDetailList.length;
 
     this.scheduledCount = this.candidateDetailList.filter(
-      (candidate: any) => candidate.InterviewAt !== null
+      (candidate: any) => candidate.interviewAt !== null
     ).length;
 
     this.nonScheduledCount = this.inProgress - this.scheduledCount;
@@ -34,17 +34,16 @@ export class DashboardViewComponent implements OnInit {
     switch (data) {
       case 's':
         this.list = this.candidateDetailList.filter(
-          (candidateDetail: any) => candidateDetail.InterviewAt !== null
+          (candidateDetail: any) => candidateDetail.interviewAt !== null
         );
         break;
       case 'ns':
         this.list = this.candidateDetailList.filter(
-          (candidateDetail: any) => candidateDetail.InterviewAt === null
+          (candidateDetail: any) => candidateDetail.interviewAt === null
         );
         break;
       default:
         this.list = this.candidateDetailList;
     }
-    console.log('list', this.list);
   }
 }

@@ -21,20 +21,26 @@ export class CardViewComponent implements OnInit, AfterViewInit {
 
   currentRoundName: any;
 
+  modalName: string = '';
+
   constructor() {}
 
   ngOnInit(): void {
-    if (this.candidateDetail.InterviewAt) {
+    if (this.candidateDetail.interviewAt) {
       let today: Date = new Date();
-      let interviewDate: Date = new Date(this.candidateDetail.InterviewAt);
+      let interviewDate: Date = new Date(this.candidateDetail.interviewAt);
       this.interviewDayCount = interviewDate.getDate() - today.getDate();
     } else {
       this.interviewDayCount = null;
     }
 
     this.currentRoundName = this.interviewRoundData.filter(
-      (round: any) => round.roundOrder === this.candidateDetail.CurrentRound
+      (round: any) => round.roundOrder === this.candidateDetail.currentRound
     )[0];
+
+    this.modalName = 'addInterviewModal-' + this.candidateDetail.applicantId;
+
+    console.log(this.candidateDetail, this.modalName);
   }
 
   ngAfterViewInit() {
@@ -55,6 +61,10 @@ export class CardViewComponent implements OnInit, AfterViewInit {
         card[i].style.transform = 'translateX(-' + offset * i + 'px)';
       }
     }
+  }
+
+  displayCardDetail() {
+    console.log('candidateDetail', this.candidateDetail);
   }
 
   list: any[] = ['H', 'T'];

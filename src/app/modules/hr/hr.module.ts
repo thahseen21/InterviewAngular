@@ -8,7 +8,7 @@ import { HrRoutingModule } from './hr-routing.module';
 import { CardViewComponent } from 'src/app/shared/component/card-view/card-view.component';
 import { AddInterviewerFormComponent } from 'src/app/shared/component/add-interviewer-form/add-interviewer-form.component';
 import { ModalComponent } from 'src/app/shared/component/modal/modal.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HrAddApplicantComponent } from './page/hr-add-applicant/hr-add-applicant.component';
 import { AddApplicantComponent } from 'src/app/shared/component/add-applicant/add-applicant.component';
 
@@ -21,8 +21,8 @@ import { AddApplicantComponent } from 'src/app/shared/component/add-applicant/ad
     AddInterviewerFormComponent,
     ModalComponent,
     HrAddApplicantComponent,
-    AddApplicantComponent
-    ],
-  imports: [CommonModule, HrRoutingModule, ReactiveFormsModule],
+    AddApplicantComponent,
+  ],
+  imports: [CommonModule, HrRoutingModule, ReactiveFormsModule, FormsModule],
 })
 export class HrModule {}

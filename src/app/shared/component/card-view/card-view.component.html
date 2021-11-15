@@ -1,10 +1,12 @@
 <div class="card-view-container">
-  <span class="applied-date">{{ candidateDetail.CreatedOn }}</span>
+  <span class="applied-date">{{
+    candidateDetail.createdOn | date: "MMM d,y"
+  }}</span>
 
   <div class="candidate-box">
-    <div class="candidate-box-name">{{ candidateDetail.Name }}</div>
+    <div class="candidate-box-name">{{ candidateDetail.applicantName }}</div>
     <div class="candidate-box-designation">
-      {{ candidateDetail.AppliedFor }}
+      {{ candidateDetail.appliedFor }}
     </div>
   </div>
 
@@ -14,7 +16,7 @@
         class="progress-step"
         *ngFor="let item of interviewRoundData; index as i"
         [ngClass]="
-          item.roundOrder < candidateDetail.CurrentRound
+          item.roundOrder < candidateDetail.currentRound
             ? 'progress-step-completed'
             : ''
         "
@@ -22,7 +24,7 @@
         <svg
           class="circle"
           [ngClass]="
-            item.roundOrder < candidateDetail.CurrentRound
+            item.roundOrder < candidateDetail.currentRound
               ? 'round-completed'
               : ''
           "
@@ -31,7 +33,7 @@
     </div>
 
     <span class="progress-box-round-header">{{
-      currentRoundName.roundName
+      currentRoundName?.roundName
     }}</span>
   </div>
 
@@ -40,9 +42,12 @@
       <div id="test">
         <div
           class="interviewer"
-          *ngFor="let item of candidateDetail.Interview; index as i"
+          *ngFor="
+            let interviewer of candidateDetail.interviewerList;
+            index as i
+          "
         >
-          {{ item.interviewName[0] }}
+          {{ interviewer[0] }}
         </div>
       </div>
 
@@ -50,7 +55,8 @@
         class="add-button btn-primary"
         type="button"
         data-toggle="modal"
-        data-target="#addInterviewModal"
+        [attr.data-target]="'#' + modalName"
+        (click)="displayCardDetail()"
       >
         <i class="far fa-plus"></i>
       </button>
@@ -68,7 +74,10 @@
     </div>
   </div>
 
-  <app-modal modalName="addInterviewModal">
-    <app-add-interviewer-form></app-add-interviewer-form>
+  <app-modal modalName="{{ modalName }}">
+    <app-add-interviewer-form
+      [interviewAt]="candidateDetail.interviewAt"
+    ></app-add-interviewer-form>
   </app-modal>
 </div>
+.
