@@ -30,5 +30,5 @@ export class CardViewComponent implements OnInit, AfterViewInit {
     }
   }
 
-  list: any[] = ['H', 'T'];
+  list: any[] = ['H', 'T', 'T', 'T', 'T', 'T', 'T', 'T', 'T', 'T', 'T'];
 }

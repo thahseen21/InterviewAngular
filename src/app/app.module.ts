@@ -20,7 +20,7 @@ import { AddInterviewerFormComponent } from './shared/component/add-interviewer-
     CardViewComponent,
     DashboardViewComponent,
     ModalComponent,
-    AddInterviewerFormComponent
+    AddInterviewerFormComponent,
   ],
   imports: [
     BrowserModule,
